@@ -1,24 +1,24 @@
 <section class="mt-3 px-5">
-  <form>
+  <form (ngSubmit)="formsubmit()">
     <div class="row w-50 mx-auto p-4 rounded">
       <div class="col-6">
         <label>Initial Investment</label>
-        <input type="number" class="form-control"/>
+        <input type="number" class="form-control" name="initalInvestment" [(ngModel)] ="initalInvestment"/>
       </div>
 
       <div class="col-6">
         <label>Annual Investment</label>
-        <input type="number" class="form-control"/>
+        <input type="number" class="form-control" name="anualInvestment" [(ngModel)] ="anualInvestment"/>
       </div>
 
       <div class="col-6 mt-3">
         <label>Expected Return</label>
-        <input type="number" class="form-control"/>
+        <input type="number" class="form-control" name="expectedReturnInvestment" [(ngModel)] ="expectedReturnInvestment"/>
       </div>
 
       <div class="col-6 mt-3">
         <label>Duration</label>
-        <input type="number" class="form-control"/>
+        <input type="number" class="form-control" name="duration" [(ngModel)] ="duration"/>
       </div>
 
       <div class="col-12 mt-3 text-center">
