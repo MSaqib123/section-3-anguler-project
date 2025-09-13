@@ -1,19 +1,18 @@
-<p>Please enter some values and press "Calculate".</p>
+<p class="text-center">Please enter some values and press "Calculate".</p>
 
 <table>
-    <thead>
+    <thead class="">
         <tr>
-            
-        <th>year</th>
-        <th>invesment value</th>
-        <th>interest (year)</th>
-        <th>total ınterest</th>
-        <th>invested capital</th>
-        
+            <th class="px-2">year</th>
+            <th class="px-2">invesment value</th>
+            <th class="px-2">interest (year)</th>
+            <th class="px-2">total ınterest</th>
+            <th class="px-2">invested capital</th>
+
         </tr>
     </thead>
     <tbody>
-        <!-- @for (inv of invData; track $index) {
+        @for (inv of results; track $index) {
         <tr>
 
             <td>{{ inv.year }}</td>
@@ -22,6 +21,6 @@
             <td>{{ inv.totalInterest | currency:'USD':'symbol':'1.2-2' }}</td>
             <td>{{ inv.totalAmountInvested | currency:'USD':'symbol':'1.2-2' }}</td>
         </tr>
-        } -->
+        }
     </tbody>
 </table>
