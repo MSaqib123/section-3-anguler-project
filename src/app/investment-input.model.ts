@@ -1,5 +1,5 @@
 
-interface InvestmentInput {
+export interface InvestmentInput {
   initialInvestment: number;
   duration: number;
   expectedReturn: number;

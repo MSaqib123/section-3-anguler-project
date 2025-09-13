@@ -32,15 +32,23 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './_2_SolutionByTeacher/header/header.component';
 import { UserInputComponent } from './_2_SolutionByTeacher/user-input/user-input.component';
-
+import { InvestmentResultComponent } from "./_2_SolutionByTeacher/investment-result/investment-result.component";
+import { InvestmentInput } from './investment-input.model';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, UserInputComponent],
+  imports: [RouterOutlet, HeaderComponent, UserInputComponent, InvestmentResultComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-
+  resultsData? : {
+    year: number;
+    interest: number;
+    valueEndOfYear: number;
+    annualInvestment: number;
+    totalInterest: number;
+    totalAmountInvested: number;
+  }[];
 
   calculateInvestmentResults( data:InvestmentInput)
   {
@@ -53,8 +61,7 @@ export class AppComponent {
       const year = i + 1;
       const interestEarnedInYear = investmentValue * (expectedReturn / 100);
       investmentValue += interestEarnedInYear + annualInvestment;
-      const totalInterest =
-        investmentValue - annualInvestment * year - initialInvestment;
+      const totalInterest = investmentValue - annualInvestment * year - initialInvestment;
       annualData.push({
         year: year,
         interest: interestEarnedInYear,
@@ -64,10 +71,10 @@ export class AppComponent {
         totalAmountInvested: initialInvestment + annualInvestment * year,
       });
     }
-
-    console.log(data);
-    console.log(annualData);
-    return annualData;
+    // console.log(data);
+    // console.log(annualData);
+    // return annualData;
+    this.resultsData = annualData;
   }
 }
 
