@@ -35,10 +35,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./_2_SolutionByTeacher/header/header.component";
+import { UserInputComponent } from "./_2_SolutionByTeacher/user-input/user-input.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent, UserInputComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
