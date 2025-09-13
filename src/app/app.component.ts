@@ -28,7 +28,6 @@
 // <!-- ===== _2_SolutionByTeacher ===== -->
 // <!--===================================-->
 //#region
-
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './_2_SolutionByTeacher/header/header.component';
@@ -43,7 +42,7 @@ import { UserInputComponent } from './_2_SolutionByTeacher/user-input/user-input
 export class AppComponent {
 
 
-  calculateInvestmentResults( data:{initialInvestment: number; duration: number; expectedReturn: number;annualInvestment: number})
+  calculateInvestmentResults( data:InvestmentInput)
   {
     const {initialInvestment,duration,expectedReturn,annualInvestment} = data;
 
