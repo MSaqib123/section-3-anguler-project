@@ -7,10 +7,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
-  initialinvestment = "";
-  annualinvestment = "";
-  expectedreturn = "";
-  duration = "";    
+  initialinvestment = "0";
+  annualinvestment = "0";
+  expectedreturn = "5";
+  duration = "10";    
 
   submitForm()
   {
