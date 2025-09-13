@@ -1,0 +1,26 @@
+<p class="text-center">Please enter some values and press "Calculate".</p>
+
+<table>
+    <thead class="">
+        <tr>
+            <th class="px-2">year</th>
+            <th class="px-2">invesment value</th>
+            <th class="px-2">interest (year)</th>
+            <th class="px-2">total ınterest</th>
+            <th class="px-2">invested capital</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @for (inv of results; track $index) {
+        <tr>
+
+            <td>{{ inv.year }}</td>
+            <td>{{ inv.valueEndOfYear | currency:'USD':'symbol':'1.2-2' }}</td>
+            <td>{{ inv.interest | currency:'USD':'symbol':'1.2-2' }}</td>
+            <td>{{ inv.totalInterest | currency:'USD':'symbol':'1.2-2' }}</td>
+            <td>{{ inv.totalAmountInvested | currency:'USD':'symbol':'1.2-2' }}</td>
+        </tr>
+        }
+    </tbody>
+</table>
