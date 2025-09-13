@@ -1,4 +1,4 @@
-@if(results() && results()!.length > 0){
+@if(results && results!.length > 0){
 
 <table>
     <thead class="">
@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (inv of results(); track $index) {
+        @for (inv of results; track $index) {
         <tr>
 
             <td>{{ inv.year }}</td>
