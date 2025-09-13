@@ -1,4 +1,4 @@
-<p class="text-center">Please enter some values and press "Calculate".</p>
+@if(results() && results()!.length > 0){
 
 <table>
     <thead class="">
@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (inv of results; track $index) {
+        @for (inv of results(); track $index) {
         <tr>
 
             <td>{{ inv.year }}</td>
@@ -24,3 +24,9 @@
         }
     </tbody>
 </table>
+
+}
+@else {
+    <p class="text-center">Please enter some values and press "Calculate".</p>
+    
+}

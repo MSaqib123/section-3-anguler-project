@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, Input, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, input, Input, SimpleChange, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-investment-result',
@@ -8,14 +8,22 @@ import { Component, Input, SimpleChange, SimpleChanges } from '@angular/core';
   styleUrl: './investment-result.component.css'
 })
 export class InvestmentResultComponent {
-  @Input({required:true}) results? :{
+  // @Input({required:true}) results? :{
+  //   year: number;
+  //   interest: number;
+  //   valueEndOfYear: number;
+  //   annualInvestment: number;
+  //   totalInterest: number;
+  //   totalAmountInvested: number;
+  // }[];
+  results = input<{
     year: number;
     interest: number;
     valueEndOfYear: number;
     annualInvestment: number;
     totalInterest: number;
     totalAmountInvested: number;
-  }[];
+  }[]>();
 
   ngOnChanges(changes: SimpleChanges):void{
     console.log(this.results,"Pakistan");

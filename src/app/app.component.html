@@ -13,6 +13,15 @@
 <!--===================================-->
 <!-- ===== _2_SolutionByTeacher ===== -->
 <!--===================================-->
+<!-- <app-header/>
+<app-user-input (calculate)="calculateInvestmentResults($event)"/>
+<app-investment-result [results]="resultsData"/> -->
+
+
+
+<!--===================================-->
+<!-- ===== _3_Soution_With_Service ===== -->
+<!--===================================-->
 <app-header/>
 <app-user-input (calculate)="calculateInvestmentResults($event)"/>
-<app-investment-result [results]="resultsData"/>
+<app-investment-result [results]="resultsData()"/>
