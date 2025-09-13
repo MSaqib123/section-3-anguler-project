@@ -86,54 +86,74 @@
 // <!-- ===== _3_Soution_With_Service ===== -->
 // <!--===================================-->
 //#region
+// import { Component, signal } from '@angular/core';
+// import { RouterOutlet } from '@angular/router';
+// import { HeaderComponent } from './_3_Soution_With_Service/header/header.component';
+// import { UserInputComponent } from './_3_Soution_With_Service/user-input/user-input.component';
+// import { InvestmentResultComponent } from "./_3_Soution_With_Service/investment-result/investment-result.component";
+// import { InvestmentInput } from './investment-input.model';
+// @Component({
+//   selector: 'app-root',
+//   imports: [RouterOutlet, HeaderComponent, UserInputComponent, InvestmentResultComponent],
+//   templateUrl: './app.component.html',
+//   styleUrl: './app.component.css',
+// })
+// export class AppComponent {
+  
+//   // resultsData = signal<{
+//   //   year: number;
+//   //   interest: number;
+//   //   valueEndOfYear: number;
+//   //   annualInvestment: number;
+//   //   totalInterest: number;
+//   //   totalAmountInvested: number;
+//   // }[] | undefined>(undefined);
+
+
+//   // calculateInvestmentResults( data:InvestmentInput)
+//   // {
+//   //   const {initialInvestment,duration,expectedReturn,annualInvestment} = data;
+
+//   //   const annualData = [];
+//   //   let investmentValue = data.initialInvestment;
+
+//   //   for (let i = 0; i < data.duration; i++) {
+//   //     const year = i + 1;
+//   //     const interestEarnedInYear = investmentValue * (expectedReturn / 100);
+//   //     investmentValue += interestEarnedInYear + annualInvestment;
+//   //     const totalInterest = investmentValue - annualInvestment * year - initialInvestment;
+//   //     annualData.push({
+//   //       year: year,
+//   //       interest: interestEarnedInYear,
+//   //       valueEndOfYear: investmentValue,
+//   //       annualInvestment: annualInvestment,
+//   //       totalInterest: totalInterest,
+//   //       totalAmountInvested: initialInvestment + annualInvestment * year,
+//   //     });
+//   //   }
+//   //   // this.resultsData = annualData;
+//   //   this.resultsData.set(annualData);
+//   // }
+// }
+
+//#endregion
+
+
+
+// <!--===================================-->
+// <!-- ===== _4_Migrate_to_Modules ===== -->
+// <!--===================================-->
+//#region
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './_3_Soution_With_Service/header/header.component';
-import { UserInputComponent } from './_3_Soution_With_Service/user-input/user-input.component';
-import { InvestmentResultComponent } from "./_3_Soution_With_Service/investment-result/investment-result.component";
-import { InvestmentInput } from './investment-input.model';
+
 @Component({
+  standalone:false,
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, UserInputComponent, InvestmentResultComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   
-  // resultsData = signal<{
-  //   year: number;
-  //   interest: number;
-  //   valueEndOfYear: number;
-  //   annualInvestment: number;
-  //   totalInterest: number;
-  //   totalAmountInvested: number;
-  // }[] | undefined>(undefined);
-
-
-  // calculateInvestmentResults( data:InvestmentInput)
-  // {
-  //   const {initialInvestment,duration,expectedReturn,annualInvestment} = data;
-
-  //   const annualData = [];
-  //   let investmentValue = data.initialInvestment;
-
-  //   for (let i = 0; i < data.duration; i++) {
-  //     const year = i + 1;
-  //     const interestEarnedInYear = investmentValue * (expectedReturn / 100);
-  //     investmentValue += interestEarnedInYear + annualInvestment;
-  //     const totalInterest = investmentValue - annualInvestment * year - initialInvestment;
-  //     annualData.push({
-  //       year: year,
-  //       interest: interestEarnedInYear,
-  //       valueEndOfYear: investmentValue,
-  //       annualInvestment: annualInvestment,
-  //       totalInterest: totalInterest,
-  //       totalAmountInvested: initialInvestment + annualInvestment * year,
-  //     });
-  //   }
-  //   // this.resultsData = annualData;
-  //   this.resultsData.set(annualData);
-  // }
 }
 
 //#endregion
